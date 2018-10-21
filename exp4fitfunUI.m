@@ -12,5 +12,5 @@ for ii=1:length(t)
    %cv(1,ii)=A+B*t(ii)+exp(-(t(ii)+t0)/(tau+gamma*t(ii)));
    %cv(1,ii)=A+B*t(ii)+0.5*(gamma+sqrt(gamma^2+4*exp(-(t(ii)+t0)/tau)));
    %cv(1,ii)=fit2(1)+fit2(2)*t(ii)+exp(-(t(ii)+fit2(3))/fit2(4))+exp(-(t(ii)+t1)/tau1);
-   cv(1,ii)=exp(-(t(ii)+fit2(3))/fit2(4))+exp(-(t(ii)+t1)/tau1);
+   cv(1,ii)=t1*exp(-(t(ii)+fit2(4))/tau1);
 end
